@@ -1,0 +1,22 @@
+﻿<Window x:Class="Testík.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Testík"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="evidenceListBox" HorizontalAlignment="Left" Height="300" Margin="10,10,0,0" VerticalAlignment="Top" Width="560">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Jmeno}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="addButton" Content="Přidat Záznam" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Margin="10,320,0,0" Click="AddButton_Click"/>
+        <Button x:Name="deleteButton" Content="Odstranit Záznam" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="110,320,0,0" Click="DeleteButton_Click"/>
+        <Button x:Name="editButton" Content="Upravit Záznam" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Margin="220,320,0,0" Click="EditButton_Click"/>
+        <Button x:Name="showMoreButton" Content="Zobrazit Detail Záznamu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="135" Margin="320,320,0,0" Click="ShowMoreButton_Click"/>
+    </Grid>
+</Window>
